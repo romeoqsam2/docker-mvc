@@ -4,7 +4,7 @@ EXPOSE 80
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY ["docker-mvc/docker-mvc.csproj", "docker-mvc/"]
+COPY ["docker-mvc.csproj", "docker-mvc/"]
 RUN dotnet restore "docker-mvc/docker-mvc.csproj"
 COPY . .
 WORKDIR "/src/docker-mvc"
